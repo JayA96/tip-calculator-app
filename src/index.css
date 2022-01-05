@@ -1,13 +1,234 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(186, 14%, 43%);
+    margin: 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+    margin-top: 100px;
+    letter-spacing: 15px;
+    padding-left: 15px;
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+h1, p {
+    margin: 0px;
+}
+
+p {
+    font-size: 13px;
+}
+
+.header {
+    margin-top: 100px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 25px;
+    width: 920px;
+    margin: 100px auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.left {
+    text-align: left;
+    padding: 50px;
+}
+
+.bill, .tip {
+    margin-bottom: 40px;
+}
+
+.bill input, .people input, .btn-group {
+    margin-top: 10px;
+}
+
+.bill input {
+    background: url(./images/icon-dollar.svg) hsl(189, 41%, 97%) no-repeat scroll 15px 15px;
+}
+
+.people input {
+    background: url(./images/icon-person.svg) hsl(189, 41%, 97%) no-repeat scroll 15px 15px;
+}
+
+.people h3 {
+    display: inline;
+}
+
+.error {
+    float: right;
+    color: #C86D60;
+}
+
+input {
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+    padding: 6px 15px;
+    border-style: hidden;
+    border-radius: 4px;
+    background-color: hsl(189, 41%, 97%);
+    width: 100%;
+    box-sizing: border-box;
+    color: hsl(183, 100%, 15%);
+}
+
+input:focus {
+    outline-color: hsl(172, 67%, 45%);
+}
+
+.error-input, .error-input:focus {
+    outline-color: #C86D60;
+}
+
+input::placeholder {
+    color: hsl(184, 14%, 56%);
+}
+
+.btn-group {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 14px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.btn-group button {
+    font: inherit;
+    padding: 7px;
+    border-style: hidden;
+    border-radius: 4px;
+}
+
+.btn-group input {
+    font-size: 22px;
+}
+
+.btn-group input::placeholder {
+    color: hsl(186, 14%, 43%);
+}
+
+.active-btn {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+}
+
+.inactive-btn {
+    color: white;
+    background-color: hsl(183, 100%, 15%);
+}
+
+.right {
+    margin: 32px;
+    margin-left: 0px;
+    padding: 12% 8% 6% 8%;
+    border-radius: 15px;
+    background-color: hsl(183, 100%, 15%);
+    position: relative;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 3fr;
+    row-gap: 35px;
+    height: 100%;
+    align-items: center;
+}
+
+.results-title {
+    text-align: left;
+}
+
+.results-title h3 {
+    color: white;
+}
+
+.results-number {
+    text-align: right;
+    font-size: 40px;
+    font-weight: 700;
+    color: hsl(172, 67%, 45%);
+}
+
+.right button {
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 7px;
+    width: 100%;
+    grid-area: 3 / 1 / 3 / 3;
+    align-self: end;
+    border-style: hidden;
+    border-radius: 4px;
+}
+
+.active-reset {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.inactive-reset {
+    background-color: hsl(186, 14%, 43%);
+    color: hsl(183, 100%, 15%);
+}
+
+.btn-group button:hover, .reset-hover {
+    background-color: #9FE8DF;
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 920px) {
+    .container {
+        max-width: 375px;
+        margin: 30px auto;
+    }
+
+    .header {
+        margin-top: 30px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: 1fr auto;
+    }
+
+    .left {
+        padding: 30px;
+        padding-bottom: 0px;
+    }
+
+    .results-grid {
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 0px;
+    }
+
+    .right {
+        padding-top: 8%;
+        margin-left: 32px;
+    }
 }
