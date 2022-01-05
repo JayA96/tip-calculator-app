@@ -2,7 +2,7 @@
   "name": "tip-calculator-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jaya96.github.io/tip-calculator-app",
+  "homepage": "https://jaya96.github.io/tip-calculator-app/",
   "dependencies": {
     "@mui/material": "^5.2.3",
     "@reduxjs/toolkit": "^1.7.1",
